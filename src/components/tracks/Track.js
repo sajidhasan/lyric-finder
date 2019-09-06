@@ -8,7 +8,7 @@ export default function Track(props) {
         <div className="col-md-6">
             <div className="card bg-light mb-4 shaddow-sm">
                 <div className="card-header text-center">
-                    <strong><i class="far fa-play-circle"></i></strong> {track.track_name }
+                    <strong><i className="far fa-play-circle"></i></strong> {track.track_name }
                 </div>
                 <div className="card-body">
                     <p className="card-text">
