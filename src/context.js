@@ -11,7 +11,7 @@ export class Provider extends Component {
     };
 
     componentDidMount(){
-        axios.get(`https://cors-anywhere.herokuapp.com/https://api.musixmatch.com/ws/1.1/chart.tracks.get?chart_name=top&page=1&page_size=20&country=us&f_has_lyrics=1&apikey=`)
+        axios.get(`https://cors-anywhere.herokuapp.com/https://api.musixmatch.com/ws/1.1/chart.tracks.get?chart_name=top&page=1&page_size=20&country=us&f_has_lyrics=1&apikey=556f9f6b05679ea61792248c6bad8ca2`)
             .then(res => {
                 //console.log(res.data);
                 this.setState({track_list: res.data.message.body.track_list});

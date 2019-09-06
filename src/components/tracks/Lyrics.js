@@ -11,12 +11,12 @@ export default class Lyrics extends Component {
     };
 
     componentDidMount() {
-        axios.get(`https://cors-anywhere.herokuapp.com/https://api.musixmatch.com/ws/1.1/track.lyrics.get?track_id=${this.props.match.params.id}&apikey=`)
+        axios.get(`https://cors-anywhere.herokuapp.com/https://api.musixmatch.com/ws/1.1/track.lyrics.get?track_id=${this.props.match.params.id}&apikey=556f9f6b05679ea61792248c6bad8ca2`)
             .then(res => {
             console.log(res.data);
             this.setState({lyrics: res.data.message.body.lyrics});
 
-            return axios.get(`https://cors-anywhere.herokuapp.com/https://api.musixmatch.com/ws/1.1/track.get?track_id=${this.props.match.params.id}&apikey=`)
+            return axios.get(`https://cors-anywhere.herokuapp.com/https://api.musixmatch.com/ws/1.1/track.get?track_id=${this.props.match.params.id}&apikey=556f9f6b05679ea61792248c6bad8ca2`)
         })
         .then(res => {
             console.log(res.data);
