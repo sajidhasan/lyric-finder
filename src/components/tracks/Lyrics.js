@@ -10,6 +10,9 @@ export default class Lyrics extends Component {
         lyrics : {}
     };
 
+    //API key must not be exposed like this
+    //here the API key is exposed for demo purpose, usually it stays within .env file and
+    //imported from there
     componentDidMount() {
         axios.get(`https://cors-anywhere.herokuapp.com/https://api.musixmatch.com/ws/1.1/track.lyrics.get?track_id=${this.props.match.params.id}&apikey=556f9f6b05679ea61792248c6bad8ca2`)
             .then(res => {
